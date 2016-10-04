@@ -28,6 +28,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ENSDK.h"
+#import "ENNotebookChooserViewController.h"
+#import "ENNotebookPickerButton.h"
+#import "ENNotebookPickerView.h"
+#import "RMSTokenView.h"
+
 @class ENSaveToEvernoteViewController;
 
 @protocol ENSendToEvernoteViewControllerDelegate <NSObject>
@@ -38,4 +43,15 @@
 
 @interface ENSaveToEvernoteViewController : UIViewController
 @property (nonatomic, weak) id<ENSendToEvernoteViewControllerDelegate> delegate;
+@property (nonatomic, strong) UIBarButtonItem * saveButtonItem;
+@property (nonatomic, strong) UITextField * titleField;
+@property (nonatomic, strong) UITextField * notebookField;
+@property (nonatomic, strong) UIWebView * noteView;
+@property (nonatomic, strong) ENNotebookPickerView *notebookPickerView;
+@property (nonatomic, strong) ENNotebookPickerButton * notebookPickerButton;
+@property (nonatomic, strong) RMSTokenView * tagsView;
+@property (nonatomic, strong) NSArray * notebookList;
+@property (nonatomic, strong) ENNotebook * currentNotebook;
+
+- (void)updateCurrentNotebookDisplay;
 @end

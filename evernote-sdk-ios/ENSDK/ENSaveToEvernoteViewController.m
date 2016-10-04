@@ -27,12 +27,7 @@
  */
 
 #import "ENSaveToEvernoteViewController.h"
-#import "ENNotebookChooserViewController.h"
-#import "ENNotebookPickerButton.h"
-#import "ENSDK.h"
 #import "ENTheme.h"
-#import "RMSTokenView.h"
-#import "ENNotebookPickerView.h"
 #import "ENSDKPrivate.h"
 #import "ENSaveToEvernoteActivity.h"
 
@@ -47,16 +42,6 @@ CGFloat kTextLeftPadding = 20;
 @end
 
 @interface ENSaveToEvernoteViewController () <ENNotebookChooserViewControllerDelegate>
-@property (nonatomic, strong) UIBarButtonItem * saveButtonItem;
-@property (nonatomic, strong) UITextField * titleField;
-@property (nonatomic, strong) UITextField * notebookField;
-@property (nonatomic, strong) ENNotebookPickerView *notebookPickerView;
-@property (nonatomic, strong) ENNotebookPickerButton * notebookPickerButton;
-@property (nonatomic, strong) RMSTokenView * tagsView;
-@property (nonatomic, strong) UIWebView * noteView;
-
-@property (nonatomic, strong) NSArray * notebookList;
-@property (nonatomic, strong) ENNotebook * currentNotebook;
 @end
 
 @implementation ENSaveToEvernoteViewController
